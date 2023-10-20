@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import "./styles.css";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 function CreateUser() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [phone, setPhone] = useState();
   const [hobbies, setHobbies] = useState();
+  const navigate = useNavigate();
 
   const submit = (e) => {
     e.preventDefault();
     axios
       .post("http://localhost:3001/createUser", { name, email, phone, hobbies })
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result);
+        navigate("/");
+      })
       .catch((err) => console.log(err));
   };
   return (

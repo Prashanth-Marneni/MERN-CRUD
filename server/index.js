@@ -95,7 +95,7 @@ app.post("/send-email", async (req, res) => {
     `;
     const mailOptions = {
       from: "prashanthmarneni10@gmail.com",
-      to: "kommurujayakrishna@gmail.com",
+      to: "info@redpositive.in",
       subject: "User Details",
       html: emailContent,
     };
