@@ -6,14 +6,14 @@ function Users() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001")
+      .get("https://reactcrud-l6xd.onrender.com")
       .then((result) => setUsers(result.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3001/deleteUser/" + id)
+      .delete("https://reactcrud-l6xd.onrender.com/deleteUser/" + id)
       .then((result) => {
         console.log(result);
         window.location.reload();
@@ -23,7 +23,7 @@ function Users() {
 
   const handleMail = (selectedRows) => {
     axios
-      .post("http://localhost:3001/send-email", { selectedRows })
+      .post("https://reactcrud-l6xd.onrender.com/send-email", { selectedRows })
       .then((result) => console.log(result))
       .catch((err) => console.log(err));
   };

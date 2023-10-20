@@ -12,7 +12,12 @@ function CreateUser() {
   const submit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/createUser", { name, email, phone, hobbies })
+      .post("https://reactcrud-l6xd.onrender.com/createUser", {
+        name,
+        email,
+        phone,
+        hobbies,
+      })
       .then((result) => {
         console.log(result);
         navigate("/");
