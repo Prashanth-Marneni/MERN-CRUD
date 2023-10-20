@@ -1,0 +1,12 @@
+.container {
+            max-width: 400px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control {
+            border-radius: 20px;
+        }
+        .btn-primary {
+            border-radius: 20px;
+        }
